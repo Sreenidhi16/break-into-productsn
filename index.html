@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Break Into Product | Your PM/BA/PO Mentor</title>
-<meta name="description" content="Land your first Product role. Personalized mentorship for freshers, career switchers & interview preppers.">
+<meta name="description" content="Personalized 1:1 mentorship for career switchers, interview preppers, and product professionals looking to level up.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -1013,7 +1013,7 @@
         Break into <em>Product.</em><br>Level up in it.
       </h1>
       <p class="hero-sub">
-        1:1 mentorship by <strong>Sreenidhi Chandar</strong> — for freshers breaking in, professionals switching roles, and experienced folks levelling up in PM, PO & BA careers. Real frameworks, AI tools, and hands-on practice.
+        1:1 mentorship by <strong>Sreenidhi Chandar</strong> — for professionals switching roles, and experienced folks levelling up in PM, PO & BA careers. Real frameworks, AI tools, and hands-on practice.
       </p>
 
       <div class="hero-promise">
@@ -1098,18 +1098,6 @@
     <p class="section-sub">Whether you're just starting out or already in product and wanting more — I've built something specific for you.</p>
 
     <div class="personas-grid">
-      <div class="persona-card" onclick="openModal('fresher')">
-        <span class="persona-icon">🎓</span>
-        <h3>The Fresher</h3>
-        <p>You've just graduated and want to get into product. You're not sure where to start or even what a PM vs BA actually does day-to-day.</p>
-        <ul class="persona-pains">
-          <li>Don't know which role — PM, PO, or BA — fits me</li>
-          <li>My resume has no product experience yet</li>
-          <li>I need a structured 60–90 day roadmap</li>
-          <li>What tools and skills should I build first?</li>
-        </ul>
-      </div>
-
       <div class="persona-card" onclick="openModal('interview')">
         <span class="persona-icon">🎯</span>
         <h3>The Interview Prepper</h3>
@@ -1158,7 +1146,7 @@
         </ul>
       </div>
 
-      <div class="persona-card ai-card" onclick="openModal('fresher')">
+      <div class="persona-card ai-card" onclick="openModal()">
         <span class="persona-icon">🤖</span>
         <h3>AI-Powered Product Work</h3>
         <p>Learn how senior product practitioners actually use AI in day-to-day work — not theory, not a YouTube tutorial. Real workflows you can apply from day one.</p>
@@ -1188,7 +1176,6 @@
         <div class="offering-tags">
           <span class="offering-tag">30 min</span>
           <span class="offering-tag">Direction Seekers</span>
-          <span class="offering-tag">Freshers</span>
         </div>
         <button class="offering-cta" onclick="openModal('direction')">I'm Interested</button>
       </div>
@@ -1213,7 +1200,7 @@
           <span class="offering-tag">45 min</span>
           <span class="offering-tag">All Profiles</span>
         </div>
-        <button class="offering-cta" onclick="openModal('fresher')">I'm Interested</button>
+        <button class="offering-cta" onclick="openModal()">I'm Interested</button>
       </div>
 
       <div class="offering-card">
@@ -1222,10 +1209,9 @@
         <p class="offering-desc">Personalized 90-day action plan. Exactly what to do, learn, and build in the next 3 months to land a product role.</p>
         <div class="offering-tags">
           <span class="offering-tag">60 min</span>
-          <span class="offering-tag">Freshers</span>
           <span class="offering-tag">Switchers</span>
         </div>
-        <button class="offering-cta" onclick="openModal('fresher')">I'm Interested</button>
+        <button class="offering-cta" onclick="openModal()">I'm Interested</button>
       </div>
 
       <div class="offering-card">
@@ -1248,7 +1234,7 @@
           <span class="offering-tag">All Levels</span>
           <span class="offering-tag">Unique Session</span>
         </div>
-        <button class="offering-cta" onclick="openModal('fresher')">I'm Interested</button>
+        <button class="offering-cta" onclick="openModal()">I'm Interested</button>
       </div>
     </div>
   </div>
@@ -1433,6 +1419,22 @@
         </div>
       </div>
 
+      <!-- TESTIMONIAL 4 — landed EY Senior Consultant offer -->
+      <div class="review-card">
+        <div class="review-source">
+          <span class="source-badge whatsapp">💬 WhatsApp · Sep 2026</span>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I landed in Bangalore and got an offer from EY for a Senior Consultant role — and I have to thank Sreenidhi for the support along the way. Our sessions were incredibly helpful, especially in understanding the Indian market and getting a real perspective on what companies are actually looking for. The guidance and clarity she gave me made a huge difference in how confident I felt throughout the process."</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Mentee · Landed EY Senior Consultant</div>
+            <div class="review-role">Offer secured after mentorship on market positioning and interview prep</div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- PREPLACED BADGE -->
@@ -1483,11 +1485,6 @@
       <p class="sub">Help me understand where you're starting from so I can recommend the right session.</p>
 
       <div class="persona-options" style="grid-template-columns:1fr 1fr;">
-        <div class="persona-option" id="opt-fresher" onclick="selectPersona('fresher', this)">
-          <span class="po-icon">🎓</span>
-          <strong>Fresher / Student</strong>
-          <span>Just graduated, want to start in product</span>
-        </div>
         <div class="persona-option" id="opt-interview" onclick="selectPersona('interview', this)">
           <span class="po-icon">🎯</span>
           <strong>Interview Prepper</strong>
@@ -1503,7 +1500,7 @@
           <strong>Direction Seeker</strong>
           <span>Interested in product but not sure which role</span>
         </div>
-        <div class="persona-option" id="opt-experienced" onclick="selectPersona('experienced', this)" style="grid-column:1/-1;">
+        <div class="persona-option" id="opt-experienced" onclick="selectPersona('experienced', this)">
           <span class="po-icon">🚀</span>
           <strong>Experienced Professional</strong>
           <span>Already in product, want to level up or move to a bigger company</span>
@@ -1611,7 +1608,6 @@
   // ─────────────────────────────────────────────────────────────────────
 
   const personaLabels = {
-    fresher:    { label: 'Fresher / Student',        icon: '🎓' },
     interview:  { label: 'Interview Prepper',         icon: '🎯' },
     switch:     { label: 'Career Switcher',           icon: '🔄' },
     direction:  { label: 'Direction Seeker',          icon: '🧭' },
